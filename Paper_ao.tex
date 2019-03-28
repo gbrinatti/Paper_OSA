@@ -1,0 +1,214 @@
+\documentclass[9pt,twocolumn,twoside]{osajnl}
+%% Please use 11pt if submitting to AOP
+% \documentclass[11pt,twocolumn,twoside]{osajnl}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{xcolor}
+\journal{ao} % Choose journal (ao, aop, josaa, josab, ol, pr)
+
+% See template introduction for guidance on setting shortarticle option
+\setboolean{shortarticle}{false}
+% true = letter / tutorial
+% false = research / review article
+% (depending on journal).
+
+\title{Three-Dimensional Confocal Raman Temperature Characterization of Electrokinetically Pumped Microchannels}
+
+\author[1,2]{Guillermo D. Brinatti Vazquez}
+\author[1,2]{Oscar E. Martínez}
+\author[2,3,4]{Juan Martín Cabaleiro}
+
+\affil[1]{Laboratorio de Fotónica, FIUBA, Av. Paseo Colón 850, Buenos Aires, Argentina.}
+\affil[2]{Conejo Nacional de Investigaciones Científicas y Técnicas (CONICET), Argentina.}
+\affil[3]{Laboratorio de Fluidodinámica, FIUBA, CONICET, Av. Paseo Colón 850, Buenos Aires, Argentina}
+\affil[4]{Laboratorio de Micro y Nanofluídica y Plasmas, UdeMM, Av. Rivadavia 2258, Buenos Aires, Argentina.}
+
+\affil[*]{Corresponding author: guillermobrinatti@gmail.com}
+
+%% To be edited by editor
+% \dates{Compiled \today}
+
+%\ociscodes{(140.3490) Lasers, distributed feedback; (060.2420) Fibers, polarization-maintaining;(060.3735) Fiber Bragg gratings.}
+
+%% To be edited by editor
+% \doi{\url{http://dx.doi.org/10.1364/XX.XX.XXXXXX}}
+
+\begin{abstract}
+A novel method for non invasive, three dimensional temperature characterization in microfluidic devices is presented. A specially designed confocal microscope was constructed and used to measure water temperature by sensing the Raman spectrum variations of the liquid. This is achieved by splitting the spectrum in the isosbestic point and detecting with two photon counters. The difference in the signals of each detector divided by their sum shows a linear dependence with temperature. A fiber coupled laser beam is used to pump the sample with 25~mW of optical power at 405~nm. This, together with the confocal character of the device, allows a 0.8~K temperature resolution and a 9~$\mu$m axial resolution using a 1 second integration time. This features make temperature profiling in all dimensions possible, in contrast with previous methods where the information present in the height of the channel is lost and the whole spectrum needed to be recovered before computing the sample temperature. Using this technique different geometries of PDMS microchannels sealed with a 150~$\mu$m glass coverslip were studied, showing that heat flow trough the glass is the dominating dissipation mechanism and defines the maximum temperature in the channel. The results show good agreement with previous work found in literature.
+\end{abstract}
+
+\setboolean{displaycopyright}{false}
+
+\begin{document}
+
+\maketitle
+
+Typical characteristic dimensions in microfluidic devices are in the range $\sim10- 100 \, \mu\mathrm{m}$. In these devices it is generally necessary to either move the liquid or move species in solution from one point to another in the microfluidic network. To do so, one needs a pumping or species transport strategy. In many cases this is done via electroosmotic pumping or electrophoresis \cite{hunter2001,lyklema1995}. In any of the latter, an electric current is passed through the liquid and the applied power has to be dissipated. Depending on the device dissipation efficiency, the liquid temperature will rise more or less. In any case, as these devices are often used in biological applications \cite{tian2008}, temperature is a critical parameter that has to be monitored and controlled. Moreover, even in non biological applications, the electroosmotic and electrophoretic mobilities are a function of temperature \cite{tang2006} so that temperature rise may lead to unwanted pumping or electrophoretic behaviour. The readers are referred to the reviews by Xuan~\cite{xuan2008} and Cetin and Li~\cite{cetin2008} for a deeper description of joule heating in electrokinetic flows. 
+
+Different techniques were developed to measure temperature inside microchannels. A common approach is to introduce in the flow a dye with a temperature dependent property~\cite{tang2006,ross2001,erickson2003,dye1,dye2}. The measurement of this property with the proper calibration is used as a thermometer. This is an invasive method, with the disadvantage that the dye can interfere with the chemical reactions occurring in the channel or vice versa. This makes the method not useful for online monitoring. Also, care must be taken to avoid photobleaching of the dyes, as the measurements are intensity dependent. Moreover, the method ``integrates'' the temperature in the channel height, not allowing for the measurement of temperature profiles perpendicular to the channel bottom. Temperature resolution depends on the amount of averaging used, reaching around 3 K in fast measurements\cite{ross2001}.
+
+Walrafen et al \cite{walrafen1} discovered that the infrared spectrum of water shows temperature dependent qualities and measured the existence of an isosbestic point around 3425~$\mathrm{cm^{-1}}$. This molecular property can be sensed using Raman Scattering to get a temperature dependent signal that is intrinsic of water. This method was proposed and proved useful in microchannels \cite{raman1,raman2,raman3} where an epi-illumination microscope was adapted to measure the Raman spectrum by exciting the water with a visible laser. Temperature is then recovered by analyzing these spectra. This method proved to be non-invasive because of the low absorption of water at visible wavelengths \cite{absorption}. 
+
+In this work we propose an improvement over these methods where spatial resolution is enhanced by using a confocal collection scheme and measurement velocity is increased by splitting the spectrum in two detectors. This results in a device capable of three dimensional maping of the channel, allowing the study of thermal gradients in every direction which is also faster as it eliminates the need of measuring the whole spectrum at each position. Additionally, the use of a 405~nm excitation beam maximizes temperature signal as Raman emission increases strongly with frequency \cite{faris}. Finally, a dark field illumination scheme is used to get scattering or fluorescence images of the sample at the same time temperature measurements take place. The device allowed to perform temperature maps that characterize the heat flow in the channel giving useful information about the geometric and construction parameters that dominate heat dissipation. Our results show good agreement with those found in the literature. 
+
+\section{Experimental}
+
+The setup used to measure the temperature in the microchannels is depicted in figure \ref{fig:setup}. The device works as a confocal microscope, where the traditional pinhole is replaced with a multimode optical fiber. The excitation beam is a 50 mW single mode fiber couple laser diode emitting at a wavelength of 405~nm. The beam is collimated by a lens (CL1) and a short pass filter with 450~nm cutoff wavelength (450~SP) is used to eliminate any noise at the signal beam wavelength (around 470~nm). At this point, a longpass dichroic mirror (420~LP) splitting at 420~nm is used to reflect the excitation beam in the direction of the sample. The beam then reflects in a second dichroic mirror (505~LP) centered around 505~nm and is focused on the sample by using a 40X, 0.95~NA microscope objective (OL). The resulting optical power at the sample is 25~mW at 405~nm. The backscattered Raman emission coming from the sample is collected by the same microscope objective and directed to the optical fiber. As the Raman spectrum of water is centered around 470~nm, the signal beam will reflect in the first dichroic mirror (505~LP) and then transmit through the second (420~LP). After that, the light is directed to the multimode optical fiber by using two mirrors. A 10X, 0.28~NA microscope objective (FL) is used to focus the beam in the optical fiber which is mounted in a 3 axis linear translation stage with sub-micron resolution. This allows a confocal collection volume of 40 $\mu\mathrm{m^3}$ with an axial resolution of 9 $\mu\mathrm{m}$. The sample is mounted in a platform with tree motorized linear degrees of freedom (\textit{xyz}) and two manually controlled angular (\textit{pitch} and \textit{yaw}) degrees of freedom used to place the sample parallel to the detection plane. This allows the device to make three dimensional temperature maps of the sample.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig1.eps}
+\caption{Schematic representation of the confocal microscope used for Raman thermometry of water. A 405~nm single mode fiber coupled laser is used as excitation beam. The beam is focused in the sample by using a 40X microscope objective which also collects the Raman emission. A dichroic mirror (420~LP) is used to separate the signal which is then focused on a multimode optical fiber to achieve confocal resolution. The other end of the fiber enters a spectrometer specially designed to divide the Raman spectrum in two detectors for later processing. A different wavelength beam (520 nm) is used to get a scattering image of the sample which is separated from the signal and the pump beam by means of a dichroic mirror (505~LP) and sent to a CMOS camera. Colored arrows indicate the wavelength and the propagation direction of each beam.\label{fig:setup}}
+\end{figure}
+
+Illumination at a longer wavelength can be used to get a fluorescence or scattering image of the sample without interfering with the temperature measurements. With this purpose a 10~mW laser beam at 520~nm is used to illuminate the sample in an angle greater than the collection angle of the objective (71.8$\degree$ for a 0.95~NA objective). The scattered light or the emitted fluorescence is then collected and separated from the Raman beam using the first dichroic mirror (505~LP) which is transparent at these wavelengths. Then, a 100~mm tube lens (TL) is used to get an image of the sample plane at a CMOS camera (Pixelink PL-D725). This can be used to select a particular place in the sample to perform the temperature measurements or to monitor the fluid motion if fluorescent particles are added to the studied fluid. In the latter case a longpass optical filter should be placed before the camera to eliminate any scattering component at the laser wavelength. If this method is chosen, care must be taken in the type and concentration of the particles used, as an undesired fluorescence signal might be excited by the 405~nm beam and collected in the Raman channel if a particle passes through the confocal volume. But, as the latter is designed to be small, at low particle concentrations the probability of such event can be small enough to not interfere with the temperature measurements. Also, as the Raman cross section of water is low, the contribution to the total signal in the Raman channel of a fluorescent particle passing rapidly through the confocal volume is a sharp peak which can be easily filtered of the temperature signal which is generally expected to be smooth. 
+ 
+At the other end of the multimode optical fiber the Raman signal beam is divided in the two spectral bands necessary for the temperature measurement and then detected. For this purpose a transmission diffraction grating (DG) with 300~l/mm and a 200~mm achromatic lens (SL) is used as a simple spectrometer. A ''D" shaped mirror (DM) is used in the lens focal plane to separate the two spectral bands. The latter is mounted on a translation stage which allows a fine tuning of the separation wavelength which must be matched to the isosbestic point in order to maximize the temperature sensitivity of the method. After this both reflected and transmited beam are directed to the detectors. A 75 mm lens (LA and LB) is used in each path to make a one on one image of DM in each detector. A longpass filter centered at 450~nm (FA and FB) is used in each channel to reject the laser wavelength. Silver mirrors M1 to M6 are used for beam steering and aligning. The detectors are two photon counting modules (Hamamatsu H7828). The devices are designed to produce an amplified and shaped square pulse for each detected photon simplifying the counting procedure. The pulses are then counted in an adjustable time window using an on board DAQ device on a PC. Counting rates of around $1.5 \cdot 10^5 \,\,\mathrm{s}^{-1}$ are achieved at each channel. After this, the final signal is computed at software level as
+\begin{equation}\label{eq:S}
+S = \frac{B - A}{A + B}
+\end{equation}
+where A and B are the counts of each channel. The temperature of the sample is obtained from this calculation after proper calibration.  It is important to notice that $S$ is computed as a ratio, making the calibration independent of experimental parameters such as the excitation power or the integration time.
+
+Additionally the diffraction grating (DG) is mounted on a motorized rotation stage.  This is not completely necessary to the Raman measurements but allows using the device as a spectrometer by measuring the signal as a function of the incidence angle on the grating and then taking the numeric derivative of the resulting data. This allows to fine tune the angle in order to maximize temperature sensitivity and allows checking the detected spectrum to match the one of water, confirming the proper alignment of the microscope. 
+
+As the detectors are very sensitive and the Raman signal is very low, the whole detection part of the setup is inside a light tight enclosure to avoid ambient light reaching the detectors. This is a great advantage of using an optical fiber to produce the confocal resolution instead of a pinhole as the ambient light coupled to the fiber is practically null and the signal beam can be conveniently directed to the enclosed part of the setup, allowing a much relaxed illumination constrain in the laboratory. 
+
+To calibrate the method a temperature controlled water cell was used. This was made using a rectangular aluminum plate with a perforation sealed with two glass windows and containing around 150~$\mu\mathrm{l}$ of distilled water. A Peltier cell was fixed at one side of the piece to achieve either heating or cooling and a thermistor is used to monitor the piece temperature.  Placing this cell in the sample plane of the microscope allows to align the setup and to calibrate the method. 
+
+Microfluidics chips were made by polydimethylsiloxane (PDMS) replication of a Silicon-SU8 master~\cite{duffy1998rapid}. The PDMS microchannels produced were sealed with $150\,\mu\mathrm{m}$ thick glass coverslips. To improve the superficial bond between glass and PDMS, both parts were exposed to microwave air plasma and then gently held together. The plasma step is not mandatory due to the low manometric pressure into the channel. However, plasma bonding allows for easier manipulation of the chip as the bonding is permanent. Plastic round reservoirs (made by cutting 10 ml plastic syringes, Diameter $\sim 16\,\mathrm{mm}$) were attached to both ends of the straight microchannels. We used 4 different channels whose dimensions are presented in table \ref{channeldims}.
+\begin{table}[ht]
+\small
+  \caption{\ Dimensions of the channels used in this work}
+  \begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}cccc}
+    %\hline 
+    %..& & $\tau (\mathrm{s})$ &        
+    \hline
+    Channel & Width ($\mu\mathrm{m}$) & height ($\mu\mathrm{m}$) & length ($\mathrm{mm}$) \\
+    \hline
+    A & 50 & 100 & 20\\
+    B & 80 & 100 & 10\\
+    C & 80 & 100 & 20\\
+    D & 80 & 100 & 40\\
+    \hline
+  \end{tabular*}
+  \label{channeldims}
+\end{table} 
+ 
+In this work we used a KCL solution with a conductivity of 5 $\mathrm{mS/cm}$ (around 0.035 M), and a regulated power source (up to 1 kV) to impose the external electric fields.
+
+
+
+\section{Results and Discussion}
+
+To characterize the technique a series of Raman spectra were measured at different temperatures. This was performed by using a pure water sample in the temperature controlled cell and by scanning the angle on the diffraction grating. After taking the numeric derivative, the recovered spectra are shown in figure \ref{fig:spectra}. Results show agreement with previous measurements\cite{walrafen1}. As temperature rise, the shorter wavelength components of the Raman spectrum reduce their intensity while the longer wavelength part slightly increases. The total spectrum collected in each detector (channel A and B) is shaded in light blue and red. This measurements are used to set the angle of the diffraction grating to maximize temperature sensibility. 
+
+Having set the spectrometer properly, a calibration is made by computing the quantity $S$ (as defined in equation \ref{eq:S}) as a function of temperature. The result from this experiment is shown in figure \ref{fig:calib} where a linear behavior is exhibited in the range of interest. A linear fit is finally used to obtain the calibration curve. Error bars were computed by characterizing the detection noise. With this calibration, and by measuring the noise in the temperature signal, the resolution of the method can be estimated. The result of this experiment is consistent with the spread of the data around the linear fit in figure \ref{fig:calib} with a value of 0.8~K for a integration time of one second.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig2.eps}
+\caption{Raman spectra of water at different temperatures. A dashed line marks the isosbestic point. At shorter wavelengths the signal decreases with rising temperature. At longer wavelengths the opposite behavior occurs. Shaded regions indicate the portion of the spectrum collected in each detector in the temperature measurements as shown in figure \ref{fig:setup}.\label{fig:spectra}}
+\end{figure}
+
+
+With this results a full characterization of the thermal properties of the microchannels under electroosmotic flow is possible. First of all, the temperature rise at \textit{turn on} is studied from ambient temperature (when the electric field is turned off) to the equilibrium temperature once the flow is established. The result of this experiment for a channel with dimensions b = 80~$\mu\mathrm{m}$, h = 100~$\mu\mathrm{m}$ and $L$ = 20~mm is shown if figure \ref{fig:temporal}. Electric field is turned on at $t = 0$. The flow velocity was measured to be 1~mm/s by particle tracking (a low concentration of 1 $\mu$m polystyrene particles were added to the water for this purpose). A temperature rise of 12~K is observed in a short time (around 10 seconds) for two different positions in the channel 5~mm apart. This timing is independent of the position of the channel, showing no appreciable mass transport effects.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig3.pdf}
+\caption{Temperature signal $S$ as a function of the water sample temperature. A linear fit is used as calibration for the method. Dispersion around the linear fit gives a temperature resolution of $\Delta T = 0.8$ K. Error bars were computed from a previous characterization of the detection noise. \label{fig:calib}}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig4.eps}
+\caption{Temperature rise at turn on for a microchannel under elecroosmotic flow. Electric field is activated at $t=0$. Two different positions 5 mm apart show the same behavior. The position $x=0$ is set at the inlet reservoir. (Channel dimensions  b = 80~$\mu\mathrm{m}$, h = 100~$\mu\mathrm{m}$ and $L$ = 20~mm).\label{fig:temporal}}
+\end{figure}
+
+As mentioned before, the advantage of a confocal collection scheme is that spatial temperature maps can be performed. In figure \ref{fig:horizontal} we start by showing a lateral scan (perpendicular to the flow direction, parallel to the coverslip) in a channel of dimensions b = 80~$\mathrm{m}$, h = 100~$\mu\mathrm{m}$ and $L$ = 40~mm and once a stationary temperature was established. Despite some noise, a constant 13~K increase in temperature is observed compared to ambient temperature. The sensing close to the walls of the channel is not possible due to a strong fluorescence signal coming from the PDMS. This limitation might not be the case in other manufacturing materials. For this kind of microchannels close wall sensing could be possible using a different laser wavelength, as the absorption spectrum of PDMS decays at around 580 nm \cite{fluorPDMS}. A suitable wavelength for this purpose is 633 nm, where cheap laser diodes are available. As Raman emission will shift to 808 nm a different detector should be used. Detectors with a Quatum efficiency up to 12\% at 800 nm are available (Hamamatsu H7421-50) which is higher than the efficiency of the photon counters used for the experiment (8\% at 470nm, Hamamatsu H7828) and perform almost twice as better respect to noise. This, together with an increase on pump power could lead to a temperature resolution similar to the one we achieved with close wall sensing potential. Never the less the required equipment is not available at our lab and cannot be acquired in the short term do to Argentina's cuts on science funds \cite{arg1,arg2}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig5.eps}
+\caption{Horizontal scan (perpendicular to the flow, parallel to the coverglass) showing a constant temperature rise across the channel (Channel dimensions  b = 80~$\mu\mathrm{m}$, h = 100~$\mu\mathrm{m}$ and $L$ = 40~mm).\label{fig:horizontal}}
+\end{figure}
+
+In figure \ref{fig:vertical} a vertical scan is shown for the same chip and for two different total dissipated powers on the water. Here, sensing near the ceiling of the channel is not possible (again due to PDMS fluorescense) but it is near the floor as glass exhibit no fluorescence. Because of this, data points are shown from the center of the channel to the glass surface, where the signal starts decaying as the collection volume starts sensing the glass space (and temperature SNR starts decreasing). Again, similar to what was shown in figure \ref{fig:horizontal}, temperature exhibit a constant behaviour on the whole vertical scan.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig6.eps}
+\caption{Two vertical scans at different dissipated powers in the same channel used in figure \ref{fig:horizontal}. Position zero corresponds to the center of the channel. On the right side lays the coverglass.\label{fig:vertical}}
+\end{figure}
+
+The final spatial scan is shown in figure \ref{fig:long} where a longitudinal scan was performed. Again, temperature shows a constant behavior along the channel, similar to what was shown in figure \ref{fig:temporal}. This is consistent with theoretical and experimental results \cite{jouleteorico,xuan2008} where temperature rise occurs in the very beginning of the channel and then a constant value is achieved. 
+
+%Acá la cuentita que habia hecho yo quedó obsoleta dado el modelo de Martín. 
+%A simple calculation considering that all heat flows trough the floor of the channel (glass) can be useful to estimate the required temperature gradient needed to reach a stationary regime where the extracted heat compensates Joule effect. For a typical dissipated power of 40 mW and a channel of dimensions $b = h = 100$ $\mathrm{\mu m}$ and $L$ = 20~mm the required temperature difference between the ceiling and the floor is 
+%
+%\begin{equation}
+%\Delta T = \frac{Ph}{kLb} = 1.7\,\, \mathrm{K},
+%\end{equation}
+
+%where $P$ is Joule heat dissipated on the channel and $k$ is water thermal conductivity. This upper bound is already on the limits of what is measurable with the technique and then our measurements are consistent with the glass base of the channel dominating as dissipation mechanism. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig7.eps}
+\caption{Longitudinal scan across a L = 20~mm channel. The experiment show a constant temperature rise around 13~K.\label{fig:long}}
+\end{figure}
+
+Finally, curves of temperature rise as function of dissipated power per unit glass area were measured for different channel geometries. The result of this experiment is plotted in figure \ref{fig:rectas}. A linear fit was performed for each data set. Results show that all different geometries have a similar slope, proving that glass area is the most relevant parameter defining heat dissipation out of our channels. This is also consistent with theoretical and experimental results from other groups \cite{erickson2003} where temperature rise between all PDMS and PDMS/glass channels was compared, obtaining a much lower heating effect in the latter. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig8.eps}
+\caption{Temperature rise as a function of dissipated power per unit glass area on four different channel geometries. A linear fit is performed in each data set in order to compare the slope corresponding to each channel. The similarity between the lines seems to indicate that the glass floor of the channel dominates as dissipation mechanism. Refer to table 1 for channel dimensions.\label{fig:rectas}}
+\end{figure}
+
+\section{Conclusions}
+
+A novel technique was presented that proven useful to characterize Joule heating effects in eletrokinetically pumped microchannels with three-dimensional resolution. The thermometer, that works using the temperature dependence in the Raman spectrum of liquid water, improves from previous methods by using a confocal collection scheme and by splitting the spectrum at the isosbestic point, measuring the resulting spectral bands in two separate photon counters. The resulting signal, which is linearly dependent with temperature, allows to characterize microfluidic devices with a high spatial resolution in a fast manner and without the use of dyes. 
+
+ A temperature resolution of about 0.8 K was achieved in a one second integration time using 25~mW of optical power at the sample provided from a 405~nm fiber coupled laser beam. Temperature profiles were measured in different channel geometries with results compatible with a simple heat flow model. From these experiments we conclude that heat dissipation is occurring through the glass floor of the channel in accordance with theoretical and experimental results found in literature. As temperature rise is an important parameter to control in many of the applications of these devices, the method presented here provides a complete three dimensional characterization of Joule heating effects that allows for improved channel design and online temperature monitoring.
+
+
+% Bibliography
+\bibliography{bibliography}
+
+% Full bibliography added automatically for Optics Letters submissions; the following line will simply be ignored if submitting to other journals.
+% Note that this extra page will not count against page length
+\bibliographyfullrefs{sample}
+
+%Manual citation list
+%\begin{thebibliography}{1}
+%\bibitem{Zhang:14}
+%Y.~Zhang, S.~Qiao, L.~Sun, Q.~W. Shi, W.~Huang, %L.~Li, and Z.~Yang,
+ % \enquote{Photoinduced active terahertz metamaterials with nanostructured
+  %vanadium dioxide film deposited by sol-gel method,} Opt. Express \textbf{22},
+  %11070--11078 (2014).
+%\end{thebibliography}
+
+% Please include bios and photos of all authors for aop articles
+%\ifthenelse{\equal{\journalref}{aop}}{%
+%\section*{Author Biographies}
+%\begingroup
+%\setlength\intextsep{0pt}
+%\begin{minipage}[t][6.3cm][t]{1.0\textwidth} % Adjust height [6.3cm] as required for separation of bio photos.
+%  \begin{wrapfigure}{L}{0.25\textwidth}
+%    \includegraphics[width=0.25\textwidth]{john_smith.eps}
+%  \end{wrapfigure}
+%  \noindent
+%  {\bfseries John Smith} received his BSc (Mathematics) in 2000 from The University of Maryland. His research %interests include lasers and optics.
+%\end{minipage}
+%\begin{minipage}{1.0\textwidth}
+%  \begin{wrapfigure}{L}{0.25\textwidth}
+%    \includegraphics[width=0.25\textwidth]{alice_smith.eps}
+%  \end{wrapfigure}
+%  \noindent
+%  {\bfseries Alice Smith} also received her BSc (Mathematics) in 2000 from The University of Maryland. Her %research interests also include lasers and optics.
+%\endgroup
+%}{}
+
+
+\end{document}
